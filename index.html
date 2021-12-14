@@ -23,7 +23,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="./signin.html">Log In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./login.html">Log In</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,25 +55,26 @@
                             <p>각 구, 군에서 시행중인 재활용품 교환 현황을 알려드립니다.</p>
                         </div>
                         <label>우리지역</label> 	        
-                        <select size="1" id="busan" onchange="window.open(value, '_blank');">
+                        <select size="1" id="busan">
                             <option>거주지를 선택하세요</option>
-                            <option value="https://www.bsgangseo.go.kr/news/view.do?nIdx=8785&mId=0101000000">강서구</option>
-                            <option value="https://www.geumjeong.go.kr/board/view.geumj?boardId=BBS_0000004&menuCd=DOM_000001014004001000&dataSid=890882">금정구</option>
-                            <option value="https://www.gijang.go.kr/board/view.gijang?boardId=BBS_0000002&menuCd=DOM_000000101001001000&dataSid=189981">기장군</option>
-                            <option value="../noresult.html">남구</option>
-                            <option value="http://www.bsdonggu.go.kr/index.donggu?menuCd=DOM_000000104005008000">동구</option>
-                            <option value="https://www.dongnae.go.kr/board/view.dongnae?boardId=BBS_0000135&menuCd=DOM_000000207006000000&dataSid=828389">동래구</option>
-                            <option value="https://www.busanjin.go.kr/board/view.busanjin?menuCd=DOM_000000110001001000&boardId=BBS_0000009&dataSid=3826420">부산진구</option>
-                            <option value="../noresult.html">북구</option>
-                            <option value="https://www.sasang.go.kr/board/view.sasang?boardId=BBS_0000100&menuCd=DOM_000000903000000000&dataSid=478853">사상구</option>
-                            <option value="https://www.saha.go.kr/dadae1/bbs/view.do?mId=0501000000&bIdx=121255&ptIdx=539">사하구</option>
-                            <option value="https://www.bsseogu.go.kr/news/board/view.bsseogu?boardId=BBS_0000111&menuCd=DOM_000000507000000000&dataSid=168754">서구</option>
-                            <option value="https://www.suyeong.go.kr/board/view.suyeong?boardId=BBS_0000085&menuCd=DOM_000002301000000000&dataSid=173218&cpath=news&keywordEtc1=289">수영구</option>
-                            <option value="https://www.yeonje.go.kr/dong/bbs/view.do?bIdx=98106&ptIdx=113&mId=0401000000">연제구</option>
-                            <option value="https://www.yeongdo.go.kr/00000/00007/00011.web?amode=view&gcode=1027&idx=304929">영도구</option>
-                            <option value="http://www.bsjunggu.go.kr/dong/board/view.junggu?boardId=BBS_0000112&menuCd=DOM_000001101004002000&dataSid=207612">중구</option>
-                            <option value="https://www.haeundae.go.kr/board/view.do?boardId=BBS_0000038&menuCd=DOM_000000101011004002&orderBy=REGISTER_DATE%20DESC&paging=ok&startPage=34&dataSid=3069396">해운대구</option>
+                            <option value="1">강서구</option>
+                            <option value="2">금정구</option>
+                            <option value="3">기장군</option>
+                            <option value="4">남구</option>
+                            <option value="5">동구</option>
+                            <option value="6">동래구</option>
+                            <option value="7">부산진구</option>
+                            <option value="8">북구</option>
+                            <option value="9">사상구</option>
+                            <option value="10">사하구</option>
+                            <option value="11">서구</option>
+                            <option value="12">수영구</option>
+                            <option value="13">연제구</option>
+                            <option value="14">영도구</option>
+                            <option value="15">중구</option>
+                            <option value="16">해운대구</option>
                         </select>
+                        <button type="button" onclick="newinfo()">이동</button>
                     </div>
                 </div>
             </div>

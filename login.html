@@ -14,52 +14,40 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- naver login -->
+        <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <!-- callback -->
+        <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href="#page-top">Recycle</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="./login.html">Log In</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Header-->
-        <header class="masthead text-center text-white">
-            <div class="masthead-content">
-                <div class="container px-5">
-                    <h1 class="masthead-heading mb-0">로그인</h1>
-                    
-                    
-                </div>
-            </div>
-            <div class="google-login"></div>
-            <div class="naver-login"></div>
-            <div class="kakao-login"></div>
-        </header>
-        <!-- Content section 1-->
-        <section id="google">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"></div>
-                    </div>
-                    
-                        <div class="p-5">
-                            <input type="email" name="email"/>
-                        </div>
-                        <div class="p-6">
-                            <input type="password" name="password"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br/><br/><br/><br/><br/>
-        </section>
+         <!-- 네이버 로그인 버튼 노출 영역 -->
+         <div id="naver_id_login"></div>
+        <!-- //네이버 로그인 버튼 노출 영역 -->
+        <script type="text/javascript">
+  	        var naver_id_login = new naver_id_login("IujnI29iXIwjSyDU2xxK", "https://jhhkim.github.io/recycle/");
+  	        var state = naver_id_login.getUniqState();
+  	        naver_id_login.setButton("white", 2,40);
+  	        naver_id_login.setDomain("https://jhhkim.github.io/recycle/");
+  	        naver_id_login.setState(state);
+  	        naver_id_login.setPopup();
+  	        naver_id_login.init_naver_id_login();
+        </script>
+
+        <script type="text/javascript">
+            var naver_id_login = new naver_id_login("IujnI29iXIwjSyDU2xxK", "https://jhhkim.github.io/recycle/");
+            // 접근 토큰 값 출력
+            alert(naver_id_login.oauthParams.access_token);
+            // 네이버 사용자 프로필 조회
+            naver_id_login.get_naver_userprofile("naverSignInCallback()");
+            // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
+            function naverSignInCallback() {
+                alert(naver_id_login.getProfileData('email'));
+                alert(naver_id_login.getProfileData('nickname'));
+                alert(naver_id_login.getProfileData('age'));
+           }
+        </script>
         <!-- Footer-->
         <footer class="py-5 bg-black">
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2021</p></div>
